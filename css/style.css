@@ -1,0 +1,698 @@
+/* 
+    ==================================
+              public styles
+    ==================================
+*/
+* {
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --maincolor: #eb5424;
+  --subcolor: #888;
+}
+.pd-y {
+  padding: 50px 0;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+  width: 85%;
+  margin: auto;
+}
+.m-b {
+  margin-bottom: 20px;
+}
+.n-style {
+  list-style: none;
+}
+.navbar {
+  background-color: red;
+  display: flex;
+
+  align-items: center;
+}
+.logo {
+  display: block;
+  position: relative;
+  /* grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center; */
+}
+.logo .fa-staylinked{
+  color: gold;
+  font-style: 31px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.logo .fa-square-facebook{
+  position: absolute;
+  bottom: 0;
+  left: 40px;
+}
+.fa-brands {
+  margin: 0 10px;
+  color: royalblue;
+}
+/* 
+    ==================================
+              navbar styles
+    ==================================
+*/
+.navbar {
+  background: #fff;
+  padding: 20px 0;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid black;
+}
+.navbar input,
+.navbar label {
+  position: absolute;
+  top: 11px;
+  right: 25px;
+}
+.navbar input {
+  display: none;
+}
+.navbar label {
+  display: block;
+  width: 15px;
+  height: 15px;
+  padding: 20px;
+  background-image: url(../images/navbar/open.png.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.navbar input:checked ~ .ul-list {
+  display: inline-block;
+}
+.navbar .logo {
+  width: 50%;
+  float: left;
+}
+.logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 0 10px  ;
+  cursor: pointer;
+}
+.logo-text {
+  font-size: 30px;
+}
+.ul-list {
+  width: 50%;
+  float: left;
+  text-align: right;
+}
+
+.ul-list li {
+  display: inline-block;
+}
+.ul-list li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  font-weight: bold;
+  transition: transform 0.5s;
+  transform: scale(1, 1);
+}
+.navbar .ul-list .list-item a:hover {
+  color: var(--maincolor);
+  transform: scale(1.1, 1.1);
+}
+/* 
+    ==================================
+              Media Query for navbar styles
+    ==================================
+*/
+@media (min-width: 992px) {
+  .navbar label {
+    display: none;
+  }
+
+}
+@media (max-width: 991px) {
+  .navbar .logo {
+    width: 100%;
+    float: none;
+  }
+  .navbar .ul-list {
+    width: 100%;
+    float: none;
+    display: none;
+  }
+  .navbar .ul-list .list-item {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 920px) {
+
+  .logo  i{
+    display: none;
+  }
+}
+/* 
+    ==================================
+              Home styles
+    ==================================
+*/
+.home {
+  /* height: 100vh; */
+  height: 100vh;
+  background-image: url(../images/home/lnmnHYhh3mY_Full.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home .home-title {
+  font-size: 60px;
+  font-weight: bold;
+  color: var(--maincolor);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.home .home-info {
+  font-size: 35px;
+  font-display: bold;
+  color: var(--maincolor);
+  margin-bottom: 20px;
+}
+.home .home-desc {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.home .home-btn {
+  display: block;
+  width: 150px;
+  padding: 15px;
+  margin: auto;
+  text-align: center;
+  background: -webkit-linear-gradient(left, red, orange, white);
+  color: #222;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: color 0.5s;
+}
+.home .home-btn:hover {
+  background: -webkit-linear-gradient(right, red, orange, white);
+  color: #fff;
+}
+/* 
+    ==================================
+              Media Query for Home styles
+    ==================================
+*/
+@media (max-width: 768px) {
+  .home .home-title {
+    font-size: 40px;
+    color: var(--maincolor);
+  }
+  .home .home-info {
+    font-size: 25px;
+    color: royalblue;
+  }
+  .home .home-desc {
+    font-size: 15px;
+  }
+}
+/* 
+    ==================================
+              section styles
+    ==================================
+*/
+.section {
+  text-align: center;
+  padding: 30px 0;
+}
+.section .title {
+  font-size: 60px;
+}
+.section span {
+  font-weight: normal;
+}
+.section h2 {
+  font-weight: bold;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.main-item {
+  border: 1px solid var(--subcolor);
+  text-align: center;
+  margin: 0 10px;
+  transition: 0.5s;
+  transform-origin: left;
+}
+
+.main-item .icon {
+  color: var(--subcolor);
+}
+.main-item .item-title {
+  color: var(--maincolor);
+  font-size: 25px;
+}
+.main-item .line {
+  width: 60%;
+  margin: auto;
+}
+.main-item > p {
+  padding: 20px;
+  color: var(--subcolor);
+}
+/* 
+    ==================================
+              main media query styles
+    ==================================
+*/
+@media screen and (max-width: 768px) {
+  .main-content {
+    display: grid;
+    grid-template-columns: auto;
+    grid-row-gap: 10px;
+  }
+}
+
+/* 
+    ==================================
+              portfolio styles
+    ==================================
+*/
+.portfolio {
+  background: #f8f8f8;
+  margin-top: 20px;
+}
+.portfolio .list {
+  text-align: center;
+  list-style: none;
+  margin: 20px 0;
+}
+.portfolio .list li {
+  display: inline-block;
+  padding: 10px;
+  font-weight: bold;
+  width: 100px;
+}
+.portfolio .list .active {
+  background: var(--maincolor);
+  color: #fff;
+}
+.box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding:  10px;   
+   align-items: center;
+
+}
+/* =======================
+  ANIMATION images
+===========================*/
+
+@keyframes mover {
+  0% {transform: translateY(0px);}
+  100% {transform: translateY(10px);}
+}
+
+.box img {
+  margin: 10px 0;
+align-items: center;
+ max-width: 100%;
+  max-height: 300px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  animation: mover 1s infinite alternate;
+}
+
+
+.box-item {
+  position: relative;
+}
+
+/* 
+    ==================================
+              media Query portfolio styles
+    ==================================
+*/
+@media (max-width: 768px) {
+  .portfolio .list li {
+    display: block;
+    margin: auto;
+  }
+
+  .box {
+    display: block;
+    margin: auto;
+  }
+}
+/* 
+    ==================================
+             profile-skills styles
+    ==================================
+*/
+.profile-skills {
+  margin: 50px 0;
+}
+.profile-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.profile-item .new-head {
+  text-align: left;
+}
+.profile-item .profile-info div {
+  margin-bottom: 10px;
+}
+.profile-item .profile-info .website {
+  display: inline-block;
+  color: var(--maincolor);
+}
+.profile-item .profile-info span {
+  display: inline-block;
+  width: 100px;
+  font-weight: bold;
+}
+.profile-desc {
+  color: #888;
+  margin-bottom: 10px;
+}
+.main-task {
+  margin-bottom: 15px;
+  position: relative;
+}
+.main-left {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
+.main-left2 {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+}
+.main-left3 {
+  display: inline-block;
+  position: absolute;
+  right: 30px;
+}
+.parent {
+  position: relative;
+  background: gray;
+}
+.parent .active1,
+.parent .active2,
+.parent .active3 {
+  height: 4px;
+  display: block;
+  background: var(--maincolor);
+  margin-bottom: 10px;
+}
+.parent .active1 {
+  width: 100%;
+}
+.parent .active2 {
+  width: 80%;
+}
+.parent .active3 {
+  width: 70%;
+}
+
+/* 
+    ==================================
+             profile-skills Media Query styles
+    ==================================
+*/
+
+@media (max-width: 768px) {
+  .profile-content {
+    display: block;
+    width: 100%;
+  }
+}
+/* 
+    ==================================
+             creative styles
+    ==================================
+*/
+
+.crative-content {
+  background-image: url(../images/creative/home-bg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-origin: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.crative-item {
+  text-align: center;
+  color: #333;
+  font-size: 22px;
+  padding: 50px 0 20px 0;
+}
+.creative .title .title1 {
+  font-size: 50px;
+}
+.creative .title span {
+  font-weight: normal;
+}
+.creative .title .title2 {
+  font-size: 50px;
+  text-transform: uppercase;
+  color: var(--maincolor);
+}
+.creative .creative-desc {
+  line-height: 1.5;
+  color: var(--subcolor);
+}
+a {
+  text-decoration: none;
+  font-size: 20px;
+}
+/* 
+    ==================================
+             creative Media Query styles
+    ==================================
+*/
+@media screen and (max-width: 768px) {
+  .crative-content {
+    display: block;
+  }
+
+  .crative-item {
+    margin-top: 15px;
+    float: none;
+  }
+
+  .creative .creative-desc {
+    line-height: 1.5;
+    color: black;
+  }
+}
+@media screean and (max-width: 992px) {
+  .crative-content {
+    display: block;
+  }
+
+  .crative-item {
+    margin-top: 50px;
+    float: right;
+  }
+
+  .creative .creative-desc {
+    line-height: 1.5;
+    color: black;
+  }
+}
+/* 
+    ==================================
+              social-media styles
+    ==================================
+*/
+
+/* 
+    background: #3b5998; لون فيسبوك
+    background: #498cbf;لون تويتر 
+    background: #cd72e8;  لون لينكد ان
+*/
+.social-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: #fff;
+}
+
+.social-item1 {
+  background: #3b5998;
+}
+.social-item2 {
+  background: #498cbf;
+}
+.social-item3 {
+  background: #cd72e8;
+}
+.social-item {
+  padding: 100px 50px 100px 100px;
+  position: relative;
+}
+.social-item .icon {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  color: gray;
+  line-height: 50px;
+  text-align: center;
+  font-size: 25px;
+  position: absolute;
+  left: 40px;
+  top: 105px;
+}
+.social-content .social-item .social-item-info {
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+.social-item .social-item-info .title-sub {
+  font-weight: normal;
+}
+/* 
+    ==================================
+              social-media Media Query styles
+    ==================================
+*/
+@media screen and (max-width: 768px) {
+  .social-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    color: #fff;
+    align-items: center;
+    text-align: center;
+  }
+}
+/* 
+    ==================================
+              drop styles
+    ==================================
+*/
+.drop {
+  /* background: #222; */
+  color: #222;
+  text-align: center;
+}
+.drop .head {
+  font-size: 50px;
+  margin-bottom: 35px;
+}
+.drop .head span {
+  font-weight: normal;
+}
+.drop .head .title {
+  font-weight: bold;
+}
+.drop .content form {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+}
+.drop .content [type] {
+  height: 25px;
+}
+.drop .content .area-message {
+  background: #f8f8f8;
+  width: 100%;
+  outline: 0;
+}
+.drop .content .subject {
+  display: block;
+  width: 100%;
+  outline: 0;
+}
+
+[type="submit"] {
+  width: 65%;
+  text-transform: capitalize;
+  color: #5e5e5e;
+  background: #fff;
+  border: 1px solid #888;
+  cursor: pointer;
+}
+/* 
+    ==================================
+              drop  Media Query styles
+    ==================================
+*/
+@media screen and (max-width: 768px) {
+  .drop .head {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .drop .content form {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+
+/* 
+    ==================================
+             footer styles
+    ==================================
+*/
+footer {
+  text-align: center;
+  margin: 50px 0;
+}
+footer p {
+  font-size: 20px;
+  color: #222;
+  letter-spacing: 5px;
+}
+/* ================================
+=====================================
+==================================== */
+.box-item {
+}
+/* 
+style="display: flex;
+ justify-content: center; align-items: center; 
+ padding: 10px 0;
+  margin-bottom: 20px;"
+*/
+.center {
+  text-align: center;
+}
+.projects-g1 {
+  margin: auto;
+  font-size: 42px;
+  padding: 10px 5px;
+  border-bottom: 2px solid #ddd;
+  box-shadow: inset 0 0 5px #ff0000;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.projects-g1-span.projects-g1-span3, 
+.projects-g1-span.projects-g1-span4 {
+    color: rebeccapurple;
+}
+.projects-g1-span {
+    color: #eb5424;
+}
+.projects-g1:hover{
+    color: royalblue;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+
+}
